@@ -1,0 +1,15 @@
+{
+  "buildpacks": [{ "url": "heroku/nodejs" }, { "url": "heroku/python" }],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for Django.",
+      "required": true,
+      "generator": "secret"
+    },
+    "DJANGO_SETTINGS_MODULE": {
+      "description": "The settings module to use for Django. Always use .production in production environments.",
+      "required": true,
+      "value": "backend.settings.production"
+    }
+  }
+}
